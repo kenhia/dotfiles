@@ -7,7 +7,6 @@ if status is-interactive
     # Paths to stuff
     fish_add_path /home/ken/.local/bin
     fish_add_path /home/ken/.cargo/bin
-    fish_add_path /home/ken/.autojmp/bin
     fish_add_path /home/ken/bin
 
     # Colorize man pages
