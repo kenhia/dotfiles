@@ -29,6 +29,9 @@ if status is-interactive
     # zoxide (sudo pacman -S zoxide # https://github.com/ajeetdsouza/zoxide)
     zoxide init fish | source
 
+    # atuin - shell history replacement
+    atuin init fish | source
+
     # I want a cookie!
     occasional_fortune
 end
