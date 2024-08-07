@@ -30,7 +30,7 @@ if status is-interactive
     zoxide init fish | source
 
     # atuin - shell history replacement
-    atuin init fish | source
+    atuin init fish --disable-up-arrow | source
 
     # I want a cookie!
     occasional_fortune
