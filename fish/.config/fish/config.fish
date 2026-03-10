@@ -8,6 +8,8 @@ if status is-interactive
     fish_add_path /home/ken/.local/bin
     fish_add_path /home/ken/.cargo/bin
     fish_add_path /home/ken/bin
+    fish_add_path /opt/cuda/bin
+    fish_add_path /home/ken/.npm-global/bin
 
     # Colorize man pages
     export MANPAGER="less -R --use-color -Dd+r -Du+b"
@@ -31,6 +33,14 @@ if status is-interactive
 
     # atuin - shell history replacement
     atuin init fish --disable-up-arrow | source
+
+    # umask for krag reasons
+    umask 002
+
+    # Load up API tokens (Hugging Face, BattleNet, etc)
+    if test -f ~/.kconfidential/api_tokens.fish
+        source ~/.kconfidential/api_tokens.fish
+    end
 
     # I want a cookie!
     occasional_fortune
